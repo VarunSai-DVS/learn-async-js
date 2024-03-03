@@ -4,6 +4,7 @@ const fetchPromise = fetch(
 
 fetchPromise.then((response) => {
   const jsonPromise = response.json();
+  console.log(jsonPromise);
   jsonPromise.then((products) => {
     products.forEach(product => {
       console.log(product.name);

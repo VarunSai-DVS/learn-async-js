@@ -1,1 +1,15 @@
 Explain the code execution based on the order of the messages logged in src/quiz/promise-2darray.txt.
+
+Sum called ...
+returning from sum
+Sum called ...
+rejecting ...
+returning from sum
+BAD INPUT: Expected array as input
+resolving ...
+45
+
+1. Both calls to the sum function are async.
+2. They are executed and the "Sum called" is logged and at the end of the promise "returning from sum" is logged for the first call.
+3. For the second call, "Sum called" is logged, the else condition is true and "rejecting" is logged and then "returning from sum".
+3. Reject is logged first, and actual array sum takes some time so the resolving is printed next.
